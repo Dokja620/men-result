@@ -1,0 +1,27 @@
+header{
+    padding: $spacing;
+    margin: 0 0 $spacing-xl;
+    a{
+        &.men{
+            img{
+                height: 80px;
+            }
+        }
+        img{
+            height: 100px;
+            width: auto;
+        }
+    }
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing;
+    p{
+        font-weight: 600;
+        font-size: $font-size-xl;
+        opacity: .3;
+    }
+}

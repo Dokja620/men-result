@@ -1,0 +1,41 @@
+/* Default styles */
+:root {
+    /* CSS HSL */
+    --picton-blue: hsla(200, 75%, 55%, 1);
+    --azul: hsla(208, 73%, 42%, 1);
+    --apple-green: hsla(77, 73%, 44%, 1);
+    --canary: hsla(56, 100%, 50%, 1);
+    --rich-black: hsla(206, 80%, 4%, 1);
+    --white-smoke: hsla(30, 8%, 95%, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+    scroll-behavior: smooth;
+    color: var(--rich-black);
+}
+
+body {
+    min-height: 100dvh;
+    background: var(--white-smoke);
+}
+
+@import './shared/var';
+@import './shared/typo';
+@import './shared/lang';
+@import './components/navbar';
+@import './components/footer';
+@import './responsive';
+
+// Home sections
+@import './home/hero';
+@import './home/insight';
+@import './home/search';
+@import './home/list';
+
+// Pages

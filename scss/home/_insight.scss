@@ -1,0 +1,9 @@
+#insight{
+    display: flex;
+    gap: $spacing-lg;
+    > div{
+        border: 2px solid var(--rich-black);
+        padding: $spacing-xs $spacing-lg;
+        border-radius: $spacing;
+    }
+}

@@ -1,0 +1,25 @@
+// span[lang]{
+//     // background: red;
+//     font-weight: inherit;
+//     animation: fadeIguess .7s ease-in-out forwards;
+// }
+// @keyframes fadeIguess {
+//     from{
+//         transform: translateX(-5px);
+//         opacity: .7;
+//     }
+//     to{
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+// span[lang="en"]{
+//     display: none;
+// }
+
+// body:has(.language input:checked) * [lang="fr"]{
+//     display: none;
+// }
+// body:has(.language input:checked) * [lang="en"]{
+//     display: block;
+// }
