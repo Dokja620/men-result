@@ -1,9 +1,47 @@
 #insight{
     display: flex;
     gap: $spacing-lg;
+    h5{
+        opacity: .6;
+    }
     > div{
-        border: 2px solid var(--rich-black);
+        // border: 2px solid var(--rich-black);
         padding: $spacing-xs $spacing-lg;
         border-radius: $spacing;
+        border: 2px solid color-mix(in srgb, var(--rich-black), transparent 100%);
+        cursor: pointer;
+        transition: .25s ease;
+        &:hover{
+            border: 2px solid color-mix(in srgb, var(--rich-black), transparent 70%);
+        }
+    }
+    background: white;
+    border-radius: $spacing;
+    padding: $spacing;
+    position: relative;
+    box-shadow: 0 4px 6px #0000001f, 0 5px 15px #00000023;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -$spacing-xs;
+        right: -$spacing-xs;
+        height: 50px;
+        width: 70px;
+        border-radius: 4px 4px $spacing-md 4px;
+        background: var(--green);
+        box-shadow: 0 4px 6px #0000001f, 0 5px 15px #00000023;
+        z-index: -1;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: -$spacing-xs;
+        left: -$spacing-xs;
+        height: 50px;
+        width: 70px;
+        border-radius: $spacing-md 4px 4px 4px;
+        background: var(--red);
+        box-shadow: 0 4px 6px #0000001f, 0 5px 15px #00000023;
+        z-index: -1;
     }
 }

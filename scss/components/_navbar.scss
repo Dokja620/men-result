@@ -24,4 +24,7 @@ nav{
         font-size: $font-size-xl;
         opacity: .3;
     }
+    img{
+        mix-blend-mode: multiply;
+    }
 }

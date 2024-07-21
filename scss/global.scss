@@ -1,10 +1,9 @@
 /* Default styles */
 :root {
     /* CSS HSL */
-    --picton-blue: hsla(200, 75%, 55%, 1);
-    --azul: hsla(208, 73%, 42%, 1);
-    --apple-green: hsla(77, 73%, 44%, 1);
-    --canary: hsla(56, 100%, 50%, 1);
+    --blue: hsl(194, 66%, 61%);
+    --red: hsl(357, 85%, 52%);
+    --green: hsl(150, 99%, 27%);
     --rich-black: hsla(206, 80%, 4%, 1);
     --white-smoke: hsla(30, 8%, 95%, 1);
 }
@@ -39,3 +38,8 @@ body {
 @import './home/list';
 
 // Pages
+
+main{
+    display: grid;
+    gap: $spacing-xl;
+}
