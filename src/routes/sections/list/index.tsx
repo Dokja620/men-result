@@ -1,6 +1,7 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useTask$ } from '@builder.io/qwik';
 
 export const List = component$(() => {
+
     return (
         <section id="list" class="container">
             <div class="table">
@@ -18,28 +19,7 @@ export const List = component$(() => {
                     <div><p>Ecole Privée catholique saint vincent de paul</p></div>
                     <div class="result"><p>Admis</p></div>
                 </div>
-                <div class="list">
-                    <div><p>140126-G2145</p></div>
-                    <div><p>RABEMANANJARY Jean Boto</p></div>
-                    <div><p>MANAKARA</p></div>
-                    <div><p>Ecole Privée catholique saint vincent de paul</p></div>
-                    <div class="result"><p>Admis</p></div>
-                </div>
-                <div class="list">
-                    <div><p>140126-G2145</p></div>
-                    <div><p>RABEMANANJARY Jean Boto</p></div>
-                    <div><p>MANAKARA</p></div>
-                    <div><p>Ecole Privée catholique saint vincent de paul</p></div>
-                    <div class="result"><p>Admis</p></div>
-                </div>
-                <div class="list">
-                    <div><p>140126-G2145</p></div>
-                    <div><p>RABEMANANJARY Jean Boto</p></div>
-                    <div><p>MANAKARA</p></div>
-                    <div><p>Ecole Privée catholique saint vincent de paul</p></div>
-                    <div class="result"><p>Admis</p></div>
-                </div>
             </div>
         </section>
-    )
+    );
 });
