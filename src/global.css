@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Default styles */
 
 :root {
@@ -23,6 +25,7 @@
 body {
   min-height: 100dvh;
   background: var(--white-smoke);
+  max-width: 100vw;
 }
 
 /* poppins-regular - latin */
@@ -413,56 +416,35 @@ footer {
   cursor: pointer;
 }
 
-.table {
+table {
   box-shadow: 0px 4px 15px color-mix(in srgb, var(--rich-black), transparent 50%);
+  padding: 1em;
+  border-collapse: collapse;
+  max-width: 100vw;
   border-radius: 1em;
+  overflow: hidden;
+  margin: 1em;
 }
 
-.table > div {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.table .list {
+th,
+td {
   padding: 1em;
+  text-align: left;
 }
 
-.table .list:not(:last-child) {
-  position: relative;
+tr:nth-of-type(2n) {
+  background: hsla(0, 0%, 0%, 0.05);
 }
 
-.table .list:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: calc(100% - 18px);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: color-mix(in srgb, var(--rich-black), transparent 70%);
-}
-
-.table .col-names {
-  border-radius: 1em 1em 0 0;
-  padding: 1em;
+thead {
   background: var(--blue);
 }
 
-.table .col-names p {
-  font-weight: 600;
-}
-
-.table .result {
-  --passed: color-mix(in srgb, var(--green), transparent 75%);
-  --passed-dot: color-mix(in srgb, var(--green), transparent 0%);
-  --sorry: color-mix(in srgb, var(--red), transparent 75%);
-  --sorry-dot: color-mix(in srgb, var(--red), transparent 0%);
-}
-
-.table .result p {
+[data-cell=observation] p {
+  background: red;
   width: -moz-fit-content;
   width: fit-content;
-  background: var(--passed);
+  background: var(--color);
   padding: 2px 8px;
   padding-left: 32px;
   border-radius: 12px;
@@ -470,7 +452,7 @@ footer {
   font-weight: 500;
 }
 
-.table .result p::before {
+[data-cell=observation] p::before {
   content: "";
   position: absolute;
   left: 8px;
@@ -479,12 +461,63 @@ footer {
   width: 12px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: var(--passed-dot);
+  background: var(--color-dot);
+}
+
+[data-result=admis i] {
+  --color: color-mix(in srgb, var(--green), transparent 75%);
+  --color-dot: color-mix(in srgb, var(--green), transparent 0%);
+}
+
+[data-result="non admis" i] {
+  --color: color-mix(in srgb, var(--red), transparent 75%);
+  --color-dot: color-mix(in srgb, var(--red), transparent 0%);
+}
+
+[data-cell=mention] p {
+  font-weight: 500;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+[data-cell=mention] p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50%;
+  background: var(--underline);
+  z-index: -1;
+}
+
+[data-mention="Très bien" i] {
+  --underline: hsla(106, 100%, 56%, 0.836);
+}
+
+[data-mention=bien i] {
+  --underline: hsla(78, 100%, 56%, 0.74);
+}
+
+[data-mention="Assez bien" i] {
+  --underline: hsla(49, 100%, 54%, 0.588);
+}
+
+[data-mention=Passable i] {
+  --underline: hsla(0, 0%, 66%, 0.527);
 }
 
 main {
   display: grid;
   gap: 2em;
+}
+
+@media (min-width: 1024px) {
+  [data-cell=option] {
+    text-align: center;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -509,17 +542,54 @@ main {
   .container {
     max-width: 768px;
   }
+
+  table {
+    margin: 1em;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    display: grid;
+    gap: 0.6666666667em;
+    grid-template-columns: 12ch auto;
+    padding: 4px 1em;
+  }
+
+  td:first-child {
+    padding-top: 1em;
+  }
+
+  td:last-child {
+    padding-bottom: 1em;
+  }
+
+  td::before {
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 640px;
   }
+
+  #search input {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
   .container {
     max-width: 475px;
+  }
+
+  #search .search {
+    padding: 1em;
   }
 }
 
