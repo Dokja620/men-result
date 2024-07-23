@@ -548,8 +548,9 @@ main {
   td {
     display: grid;
     gap: 0.6666666667em;
-    grid-template-columns: 12ch auto;
+    grid-template-columns: 15ch auto;
     padding: 4px 1em;
+    text-transform: capitalize;
   }
 
   td:first-child {
@@ -563,7 +564,6 @@ main {
   td::before {
     content: attr(data-cell) ": ";
     font-weight: 700;
-    text-transform: capitalize;
   }
 }
 

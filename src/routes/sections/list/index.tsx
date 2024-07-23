@@ -137,13 +137,13 @@ interface TableBodyProps {
 }
 
 const columnMapping: { [key: string]: string } = {
-    matricule: 'matricule',
-    option: 'option',
-    name: 'name',
-    cisco: 'cisco',
-    studied_at: 'studied_at',
-    observation: 'observation',
-    mention: 'mention',
+    matricule: 'Matricule',
+    option: 'Option',
+    name: 'Nom et prénoms',
+    cisco: 'CISCO',
+    studied_at: 'École d\'origine',
+    observation: 'Observation',
+    mention: 'Mention',
 };
 
 const TableBody = component$(({ data, pageNo, postPerPage }: TableBodyProps) => {

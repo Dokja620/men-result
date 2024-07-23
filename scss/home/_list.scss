@@ -32,8 +32,9 @@ thead{
     td{
         display: grid;
         gap: $spacing-xs;
-        grid-template-columns: 12ch auto;
+        grid-template-columns: 15ch auto;
         padding: 4px $spacing;
+        text-transform: capitalize;
         &:first-child{
             padding-top: $spacing;
         }
@@ -43,7 +44,6 @@ thead{
         &::before{
             content: attr(data-cell) ": ";
             font-weight: 700;
-            text-transform: capitalize;
         }
     }
 }
