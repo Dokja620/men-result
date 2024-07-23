@@ -3,13 +3,14 @@ header{
     margin: 0 0 $spacing-xl;
     a{
         &.men{
-            img{
-                height: 80px;
-            }
+            height: 80px;
+            width: 80px;
+            background: url('/media/men.webp') center/cover no-repeat;
         }
-        img{
+        &.mada{
             height: 100px;
-            width: auto;
+            width: 120px;
+            background: url('/media/mada.webp') center/cover no-repeat;
         }
     }
 }
