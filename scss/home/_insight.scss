@@ -1,26 +1,41 @@
-#insight{
+#insight {
     display: flex;
+    flex-wrap: wrap;
     gap: $spacing-lg;
-    h5{
+    margin-bottom: $spacing;
+    @media (max-width: $breakpoint-xs) {
+        margin: $spacing-lg;
+        width: fit-content;
+        select{
+            font-size: 1.3rem;
+        }
+    }
+
+    h5 {
         opacity: .6;
     }
-    > div{
+
+    >div {
         // border: 2px solid var(--rich-black);
         padding: $spacing-xs $spacing-lg;
         border-radius: $spacing;
         border: 2px solid color-mix(in srgb, var(--rich-black), transparent 100%);
         cursor: pointer;
         transition: .25s ease;
-        &:hover{
+
+        &:hover {
             border: 2px solid color-mix(in srgb, var(--rich-black), transparent 70%);
         }
     }
+
     background: white;
     border-radius: $spacing;
     padding: $spacing;
     position: relative;
-    box-shadow: 0 4px 6px #0000001f, 0 5px 15px #00000023;
-    &::before{
+    box-shadow: 0 4px 6px #0000001f,
+    0 5px 15px #00000023;
+
+    &::before {
         content: '';
         position: absolute;
         bottom: -$spacing-xs;
@@ -32,7 +47,8 @@
         box-shadow: 0 4px 6px #0000001f, 0 5px 15px #00000023;
         z-index: -1;
     }
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
         top: -$spacing-xs;

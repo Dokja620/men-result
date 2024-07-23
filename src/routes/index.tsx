@@ -8,10 +8,10 @@ import { Hero } from "./sections/hero";
 export default component$(() => {
     return (
         <>
-            {/* <Hero/> */}
-            {/* <Insight /> */}
-            <Search/>
-            <List/>
+            <Hero/>
+            <Insight />
+            {/* <Search/> */}
+            {/* <List/> */}
         </>
     );
 });
