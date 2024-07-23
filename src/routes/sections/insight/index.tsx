@@ -164,12 +164,13 @@ export const Insight = component$(() => {
             <div class="exam-year">
                 <h5>Année</h5>
                 <select onChange$={handleYearChange} disabled={!store.selectedExamType}>
-                <option value="" disabled selected>_ _ _</option>
-                {store.examYears.map(year => (
-                    <option key={year} value={year.toString()}>{year}</option>
-                ))}
+                    <option value="" disabled selected>_ _ _</option>
+                    {store.examYears.map(year => (
+                        <option key={year} value={year.toString()}>{year.toString()}</option>
+                    ))}
                 </select>
             </div>
+
 
             <div class="exam-center">
                 <h5>Centre d'examen</h5>

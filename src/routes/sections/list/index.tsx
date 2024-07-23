@@ -147,9 +147,13 @@ const columnMapping: { [key: string]: string } = {
 };
 
 const TableBody = component$(({ data, pageNo, postPerPage }: TableBodyProps) => {
+    const startIndex = pageNo.value * postPerPage.value;
+    const endIndex = startIndex + postPerPage.value;
+    const paginatedData = data.slice(startIndex, endIndex);
+
     return (
         <tbody>
-            {data.map((row, index) => (
+            {paginatedData.map((row, index) => (
                 <tr key={index} class="reall-table">
                     {Object.keys(columnMapping).map((key, i) => (
                         <td
