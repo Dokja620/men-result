@@ -4,13 +4,25 @@ header{
     a{
         &.men{
             height: 80px;
-            width: 80px;
-            background: url('/media/men.webp') center/cover no-repeat;
+            width: 150px;
+            background: url('/media/mesupres.webp') center/auto 100% no-repeat;
         }
         &.mada{
             height: 100px;
             width: 120px;
-            background: url('/media/mada.webp') center/cover no-repeat;
+            background: url('/media/mada.webp') center/auto 100% no-repeat;
+        }
+        @media (max-width: $breakpoint-xs) {
+            &.men{
+                height: 60px;
+                width: 130px;
+                background: url('/media/mesupres.webp') center/auto 100% no-repeat;
+            }
+            &.mada{
+                height: 80px;
+                width: 100px;
+                background: url('/media/mada.webp') center/auto 100% no-repeat;
+            }
         }
     }
 }

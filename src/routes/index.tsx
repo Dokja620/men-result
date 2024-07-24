@@ -17,11 +17,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-    title: "RESULTAT BEPC 2024 Madagascar",
+    title: "MESUPRES | Résultat aux Examens Officiels",
     meta: [
         {
             name: "description",
-            content: "Résultat des examens BEPC Madagascar",
+            content: "Résultat aux Examens Officiels BAC",
         },
     ],
 };
